@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="fav.svg">
+<title>Stardust</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="game"></canvas>
+
+<div class="hud">
+  <div class="hud-top">
+    <div class="stat">
+      <div class="stat-label">Light</div>
+      <div class="stat-value" id="score">0</div>
+    </div>
+    <div class="stat right">
+      <div class="stat-label">Bloom</div>
+      <div class="stat-value" id="bloom">0</div>
+    </div>
+  </div>
+
+  <div class="flow-wrap">
+    <div class="flow-label">Flow</div>
+    <div class="flow-track"><div class="flow-fill" id="flowFill"></div></div>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="screen" id="startScreen">
+  <div class="title">stardust</div>
+  <div class="subtitle">A dance with light</div>
+  <div class="instructions">
+    Drift your cursor through the stars.<br>
+    Gather glowing motes to paint constellations.<br>
+    Keep moving — stillness dims your light.<br>
+    Let the cosmos bloom.
+  </div>
+  <button class="btn" id="startBtn">Begin</button>
+</div>
+
+<!-- Game Over -->
+<div class="screen hidden" id="gameOverScreen">
+  <div class="final-label">Your Light</div>
+  <div class="final-score" id="finalScore">0</div>
+  <div class="new-best hidden" id="newBest">✦ a new constellation was born ✦</div>
+  <button class="btn" id="restartBtn">Once More</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
